@@ -15,6 +15,8 @@ const redirectUrl = params.get('redirectUrl') || '../';
 // (they need to sign out first before coming here)
 //      - get the user
 //      - replace location with redirectUrl
+const user = getUser();
+if (user) location.replace(redirectUrl);
 
 // Sign up options
 const signUpType = {
